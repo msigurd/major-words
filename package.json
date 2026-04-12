@@ -1,0 +1,39 @@
+{
+  "name": "major-words",
+  "version": "1.0.0",
+  "description": "A catalog of Steely Dan's bizarro words, names, places and phrases",
+  "license": "MIT",
+  "author": "Markus Midtlien Sigurdsen",
+  "keywords": [
+    "steely dan",
+    "lyrics",
+    "words",
+    "catalog",
+    "list"
+  ],
+  "homepage": "https://github.com/msigurd/major-words",
+  "bugs": {
+    "url": "https://github.com/msigurd/major-words/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msigurd/major-words.git"
+  },
+  "type": "module",
+  "source": "src/index.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1"
+  }
+}
