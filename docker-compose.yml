@@ -1,0 +1,13 @@
+services:
+  build:
+    image: docker.io/node:24
+    entrypoint: sh -c "cd /workspace && npm run build"
+    command: sh -c "cd /workspace && npm ci"
+    volumes:
+      - ./:/workspace
+  dev:
+    image: docker.io/node:24
+    entrypoint: sh -c "cd /workspace && npm run dev"
+    command: sh -c "cd /workspace && npm ci"
+    volumes:
+      - ./:/workspace
